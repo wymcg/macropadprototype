@@ -1,0 +1,62 @@
+#include <Keyboard.h>
+
+// set pins for each of the four macros
+#define aPin 2
+#define bPin 3
+#define cPin 4
+#define dPin 5
+
+// setup pressed vars
+bool aPressed = false;
+bool bPressed = false;
+bool cPressed = false;
+bool dPressed = false;
+
+// declare bools for state of button
+bool aState, bState, cState, dState;
+
+void setup() {
+ Keyboard.begin();
+}
+
+void loop() {
+  
+  // get pin states
+  aState = digitalRead(aPin);
+  bState = digitalRead(bPin);
+  cState = digitalRead(cPin);
+  dState = digitalRead(dPin);
+
+  // trigger macros if the button is not already pressed
+  if (!aPressed && aState) {
+    aPressed = true;
+    macroA();
+  }
+  if (!bPressed && bState) {
+    bPressed = true;
+    macroB();
+  }
+  if (!cPressed && cState) {
+    cPressed = true;
+    macroC();
+  }
+  if (!dPressed && dState) {
+    dPressed = true;
+    macroD();
+  }
+
+  // update pressed var if the button has been released
+  if (aPressed && !aState) {
+    aPressed = false;
+  }
+  if (bPressed && !bState) {
+    bPressed = false;
+  }
+  if (cPressed && !cState) {
+    cPressed = false;
+  }
+  if (dPressed && !dState) {
+    dPressed = false;
+  }
+  
+}
