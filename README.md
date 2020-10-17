@@ -1,4 +1,4 @@
-# Leonardo Macro Pad
+# Penn State IEEE Macro Pad
 
 ## Circuit
 Four buttons connected to pins 2-5 of a Pro Micro. Other Leonardo boards should also work but comptibility has not been tested.
