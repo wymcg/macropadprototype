@@ -39,6 +39,7 @@ PRESS [key]      >> Alias for KEY
 * Single alphanumeric characters should be surrounded with single quotes. Strings for TYPE must be surrounded with double quotes.
 * Combinations of keys should be attached with a '+' (ie. KEY_LEFT_CTRL+'c' for Ctrl+c)
 * Any line not starting with a keyword will be ignored
+* If you are having trouble getting a more complicated macro to work, delays may help
 ### Example
 I haven't tested this because I am lazy but this should give you an idea of how to put together a simple macro config
 ```
