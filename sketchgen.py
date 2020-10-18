@@ -56,6 +56,8 @@ for line in lines:
             macros[current] += '    Keyboard.releaseAll();\n'
         elif s[0] == "KEY" or s[0] == "PRESS":
             macros[current] += '    Keyboard.write(' + s[1] + ');\n'
+        elif s[0] == "INJ" or s[0] == "INJECT":
+            macros[current] += s[1]
 
 #put together the sketch
 with open(outfile, 'w') as out:
