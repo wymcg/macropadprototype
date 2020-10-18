@@ -35,6 +35,8 @@ KEY [key]        >> Presses and releases a single key
 PRESS [key]      >> Alias for KEY
 DO [times]       >> Do a task or set of tasks enclosed in the loop a certain number of times
 OD               >> End a do loop
+INJECT [code]    >> Inject Arduino C into a macro
+INJ [code]       >> Alias for INJECT
 ```
 ### A few notes
 * Codes for non-alphanumeric keys can be found [here](https://www.arduino.cc/en/Reference/KeyboardModifiers)
