@@ -33,6 +33,8 @@ TYPE [text]      >> Types out a string
 COMBO [keys]     >> Presses and releases a key combination
 KEY [key]        >> Presses and releases a single key
 PRESS [key]      >> Alias for KEY
+INJECT [code]    >> Inject Arduino C into a macro
+INJ [code]       >> Alias for INJECT
 ```
 ### A few notes
 * Codes for non-alphanumeric keys can be found [here](https://www.arduino.cc/en/Reference/KeyboardModifiers)
