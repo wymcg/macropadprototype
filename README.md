@@ -33,6 +33,8 @@ TYPE [text]      >> Types out a string
 COMBO [keys]     >> Presses and releases a key combination
 KEY [key]        >> Presses and releases a single key
 PRESS [key]      >> Alias for KEY
+DO [times]       >> Do a task or set of tasks enclosed in the loop a certain number of times
+OD               >> End a do loop
 INJECT [code]    >> Inject Arduino C into a macro
 INJ [code]       >> Alias for INJECT
 ```
@@ -50,9 +52,11 @@ START A
 COMBO KEY_LEFT_CTRL+'z'
 END
 
-# type hello world
+# type hello world 10 times
 START B
-TYPE "Hello, World"
+DO 10
+TYPE "Hello, World! "
+OD
 END
 
 # open chrome from windows menu

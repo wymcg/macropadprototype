@@ -34,6 +34,7 @@ macros = {
 for line in lines:
     s = line.rstrip().split(' ', 1)
     if len(s) > 0:
+        #keywords
         if s[0] == "START":
             current = s[1]
             macros[current] += 'void macro' + current + '() {\n'
@@ -58,6 +59,12 @@ for line in lines:
             macros[current] += '    Keyboard.write(' + s[1] + ');\n'
         elif s[0] == "INJ" or s[0] == "INJECT":
             macros[current] += s[1]
+
+        #loops
+        elif s[0] == "DO":
+            macros[current] += '    for (int i = 0; i < ' + s[1] + '; i++) {\n'
+        elif s[0] == "OD":
+            macros[current] += '    }\n'
 
 #put together the sketch
 with open(outfile, 'w') as out:
